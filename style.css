@@ -5,7 +5,7 @@
   --button-text-color: #000000;
   --border-color: #422912;
   --shadow-color: #422912;
-  --highlight-color: rgba(255, 255, 255, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
   --surface-color: rgba(255, 255, 255, 0.05);
   --stroke-color: rgba(255, 255, 255, 0.5);
@@ -27,6 +27,7 @@
   --button-text-color: #000000;
   --border-color: #dfac1c;
   --shadow-color: #dfac1c;
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url:url(./assets/moon-stars.svg);
   --surface-color: rgba(0, 0, 0, 0.5);
   --stroke-color:  rgba(0, 0, 0, 0.05);
@@ -36,6 +37,7 @@
 
 body {
   background: var(--bg-color);
+  height: 100vh;
 }
 
 body *{
@@ -44,7 +46,8 @@ body *{
 }
 
 #container{
-  width: 360px;
+  width: 100%;
+  max-width: 700px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -97,12 +100,16 @@ body *{
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  animation: slide-out 0.4s;
 
 }
 
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
+}
+
 .dark #switch button{
-  right: 0;
-  left: initial;
+ animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -171,4 +178,27 @@ ul li a:hover{
   background: var(--highlight-color);
   
 
+}
+
+/* animation */
+
+@keyframes slide-in {
+  from{
+    left: 0;
+  
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from{
+    left: 50%;
+
+  }
+  to{
+    left: 0;
+  }
+  
 }
