@@ -26,7 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Esse projeto é parte de um programa exclusivo e gratuito promovido pela RocketSeat para ensino de tecnologias WEB.
 O DevLinks é um agregador de links para usar como cartão de visitas online.
 
-- [Acesse o projeto finalizado, online](https://tatianaczapata.github.io/linktree)
+- [Acesse o projeto finalizado, online](https://tatianaczapata.github.io/dev-links)
 
 
 
